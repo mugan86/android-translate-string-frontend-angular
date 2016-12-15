@@ -1,4 +1,4 @@
-# Angular JS Playground example to get data from differents APIS
+# Android Strings translate frontend page with communicate with API PHP in server side
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
