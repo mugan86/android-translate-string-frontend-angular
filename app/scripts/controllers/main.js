@@ -8,7 +8,7 @@
  * Controller of the translationsApp
  */
 angular.module('translationsApp')
-  .controller('MainCtrl', function ($scope, $http, translationsService) {
+  .controller('MainCtrl', function ($scope, translationsService) {
     
 
 	//Show Translate APPs List Info
