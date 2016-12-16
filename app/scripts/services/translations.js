@@ -1,5 +1,13 @@
 'use strict';
 
+/**
+ * @ngdoc function
+ * @name translationsApp.service:translationsService
+ * @description: Get data about apps and select app translate texts.
+ * # translationsService
+ * Service of the translationsApp
+ */
+ 
 angular.module('translationsApp')
 
   .service('translationsService', function translationsService($http, LOCAL_LOCALHOST) {

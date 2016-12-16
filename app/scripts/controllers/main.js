@@ -3,7 +3,7 @@
 /**
  * @ngdoc function
  * @name translationsApp.controller:MainCtrl
- * @description
+ * @description: In this controller get Data About all apps items and show to manage different actions
  * # MainCtrl
  * Controller of the translationsApp
  */

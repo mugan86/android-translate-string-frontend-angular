@@ -14,4 +14,6 @@ angular.module('translationsApp')
       'AngularJS',
       'Karma'
     ];
+
+    console.log('About');
   });
