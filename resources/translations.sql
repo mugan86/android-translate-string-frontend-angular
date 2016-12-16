@@ -29,7 +29,10 @@ CREATE TABLE IF NOT EXISTS `app` (
 ALTER TABLE `translations`
   ADD CONSTRAINT `translations_ibfk_1` FOREIGN KEY (`app_id`) REFERENCES `app` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-INSERT IGNORE INTO `app` (`id`, `name`, `description`, `first_published`, `last_update`, `original_language`)VALUES ('com.amugika.servirace', 'Servirace', '', '2014-09-02', '2016-04-06', 'en');
+INSERT IGNORE INTO `app` (`id`, `name`, `description`, `first_published`, `last_update`, `original_language`) VALUES
+('com.amugika.servirace', 'Servirace', '', '2014-09-02', '2016-04-06', 'en'),
+('com.anartz.korrikakonbertidorea', 'Run Calculator', '', '2013-03-16', '2014-11-23', 'es'),
+('com.anartzmugika.ahorkadoa', 'Ahorkadoa', '', '2013-08-16', '2014-08-01', 'eu');
 
 INSERT IGNORE INTO `translations` (`id`, `name`, `text_eu`, `text_en`, `text_es`, `text_ca`, `text_ga`, `text_pt`, `text_it`, `app_id`)VALUES ('1', 'app_name', '', 'Manage Images and Upload', '', '', '', '', '', 'com.amugika.servirace');
 INSERT IGNORE INTO `translations` (`id`, `name`, `text_eu`, `text_en`, `text_es`, `text_ca`, `text_ga`, `text_pt`, `text_it`, `app_id`)VALUES ('2', 'action_settings', '', 'Settings', '', '', '', '', '', 'com.amugika.servirace');
