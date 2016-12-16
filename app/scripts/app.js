@@ -36,6 +36,11 @@ angular
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
+      .when('/translations/:id', {
+        templateUrl: 'views/translations_list.html',
+        controller: 'TranslationsCtrl',
+        controllerAs: 'translations'
+      })
       .otherwise({
         redirectTo: '/'
       });
