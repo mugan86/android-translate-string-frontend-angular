@@ -34,3 +34,10 @@ Running `grunt test` will run the unit tests with karma.
 * git rm -r --cached .
 * git add .
 * git commit -m ".gitignore is now working"
+
+##Resources use to generate SQL data to add in our localhost.
+
+* Original xml file: strings.xml (In english language).
+* SQL to translations apps and apps translate texts create with https://github.com/mugan86/android-strings-translator-importer-exporter/blob/master/src/main/java/imported/ImportXMLToSQL.java class. 
+* Add original XML file inside src/main/resources and execute. 
+* After execute create SQL file with all necessary data (for default reference repository in translations-en/translations.sql)
