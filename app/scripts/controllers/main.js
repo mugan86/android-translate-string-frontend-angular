@@ -16,6 +16,8 @@ angular.module('translationsApp')
             .then(function(data) {
 
            console.log(data);
+           $scope.apps = data.data;
+           console.log($scope.apps);
     });
 
     //Show select APP Info       
