@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Manage Images and Upload</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Camera / Directory and Dialogs texts options-->
+    <string name="title_select_option_image">Select image from device or take photo</string>
+    <string name="camera_label">Photo Camera</string>
+    <string name="device_label">Device Images</string>
+    <string name="send_label">Save</string>
+    <string name="send_to_server_label">Synchronize</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="upload_photo">Upload image</string>
+
+
+    <string name="download_data_progress">Send data…</string>
+    <string name="download_image_data_progress">Send image…</string>
+    <string name="image_no_take_correctly">Not take correct image, please try again.</string>
+    <string name="image_upload_successfully">Image upload sucess. Thank you!</string>
+    <string name="image_upload_no_correct">Image NOT upload sucess. Please try again.</string>
+    <string name="no_granted_access">Not available permission.</string>
+    <string name="data_correct_send">Data send sucessfully!!</string>
+    <string name="data_no_correct_send">Data NOT send sucessfully, please try again.</string>
+    <string name="show_in_map_text"><u>In Map</u></string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- Manage Languages -->
+
+    <string name="make_your_language_selection">Selecciona el idioma deseado</string>
+    <string name="spanish">Castellano</string>
+    <string name="catalan">Catalán</string>
+    <string name="deutchand">Alemán</string>
+    <string name="english">Inglés</string>
+    <string name="basque">Euskera</string>
+    <string name="francais">Francés</string>
+    <string name="galizian">Gallego</string>
+    <string name="italian">Italiano</string>
+
+    <string-array name="language_string">
+        <item>@string/catalan</item>
+        <item>@string/basque</item>
+        <item>@string/spanish</item>
+    </string-array>
+    <string-array name="language_codes">
+        <item>ca</item>
+        <item>eu</item>
+        <item>es</item>
+        <item>en</item>
+        <item>gl</item>
+        <item>de</item>
+        <item>fr</item>
+        <item>it</item>
+    </string-array>
+    <string name = "reference_to_other_string">@string/app_name</string>
+</resources>
+
