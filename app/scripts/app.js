@@ -19,7 +19,14 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, $injector) {
+    
+    // use the HTML5 History API
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -43,11 +50,5 @@ angular
       })
       .otherwise({
         redirectTo: '/'
-      });
-
-      // use the HTML5 History API
-      $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
       });
   });
