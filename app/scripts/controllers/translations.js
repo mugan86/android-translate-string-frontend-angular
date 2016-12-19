@@ -21,12 +21,17 @@ angular.module('translationsApp')
     translationsService.getSelectAppTranslateTexts($routeParams.id, 1, 15)
             .then(function(data) {
 
-           $scope.translationsTexts = data.data;
-           console.log($scope.translationsTexts);
-           $scope.mainData = $scope.translationsTexts[0];
-           $scope.translationsTexts.splice(0, 1);
-           console.log($scope.mainData);
-           console.log($scope.translationsTexts);
+        $scope.translationsTexts = data.data;
+        console.log($scope.translationsTexts);
+        $scope.mainData = $scope.translationsTexts[0];
+        $scope.translationsTexts.splice(0, 1);
+        console.log($scope.mainData);
+        console.log($scope.translationsTexts);
+        $scope.totalPages = [];
+        for (var page = 1; page <= $scope.mainData.total_pages; page++)
+        {
+          $scope.totalPages.push(page);
+        }
 
     });
   });
