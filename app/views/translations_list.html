@@ -32,7 +32,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="text in translationsTexts">
-            <td>{{$index}}</td>
+            <td>{{$index + 1}}</td>
             <td>{{text.name}}</td>
             <td ng-if="text.text_ca!=''">{{text.text_ca}}</td>
             <td ng-if="text.text_en!=''">{{text.text_en}}</td>
