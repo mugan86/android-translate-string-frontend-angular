@@ -19,7 +19,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider, $locationProvider, $injector) {
+  .config(function ($routeProvider, $locationProvider) {
     
     // use the HTML5 History API
     $locationProvider.html5Mode({
