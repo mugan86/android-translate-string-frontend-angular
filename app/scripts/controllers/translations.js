@@ -23,5 +23,10 @@ angular.module('translationsApp')
 
            $scope.translationsTexts = data.data;
            console.log($scope.translationsTexts);
+           $scope.mainData = $scope.translationsTexts[0];
+           $scope.translationsTexts.splice(0, 1);
+           console.log($scope.mainData);
+           console.log($scope.translationsTexts);
+
     });
   });
