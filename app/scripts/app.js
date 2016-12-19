@@ -48,6 +48,11 @@ angular
         controller: 'TranslationsCtrl',
         controllerAs: 'translations'
       })
+      .when('/translations/:id/:page', {
+        templateUrl: 'views/translations_list.html',
+        controller: 'TranslationsCtrl',
+        controllerAs: 'translations'
+      })
       .otherwise({
         redirectTo: '/'
       });
