@@ -1,13 +1,13 @@
 <div class="table-responsive">
   <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
+    <li ng-class="{'disabled': currentPage == 1}">
+      <a href="translations/com.amugika.servirace/{{currentPage-1}}" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li ng-repeat="page in totalPages"><a href="#">{{$index + 1}}</a></li>
-    <li>
-      <a href="#" aria-label="Next">
+    <li ng-repeat="page in totalPages" ng-class="{'active': ($index + 1) == currentPage}"><a href="translations/com.amugika.servirace/{{$index+1}}">{{$index + 1}}</a></li>
+    <li ng-if="currentPage < totalPages+1">
+      <a href="translations/com.amugika.servirace/{{currentPage+1}}" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
@@ -28,12 +28,12 @@
         </thead>
         <tbody>
           <tr ng-repeat="text in translationsTexts">
-            <td>{{$index + 1}}</td>
+            <td>{{($index + 1) + ((currentPage * itemsPerPage) - itemsPerPage )}}</td>
             <td>{{text.name}}</td>
-            <td ng-if="text.text_ca!=''">{{text.text_ca}}</td>
-            <td ng-if="text.text_en!=''">{{text.text_en}}</td>
-            <td ng-if="text.text_es!=''">{{text.text_es}}</td>
-            <td ng-if="text.text_eu!=''">{{text.text_eu}}</td>
+            <td ng-if="text.text_ca!='' && mainData.original_language=='ca'">{{text.text_ca}}</td>
+            <td ng-if="text.text_en!='' && mainData.original_language=='en'">{{text.text_en}}</td>
+            <td ng-if="text.text_es!='' && mainData.original_language=='es'">{{text.text_es}}</td>
+            <td ng-if="text.text_eu!='' && mainData.original_language=='eu'">{{text.text_eu}}</td>
             <td>
                 <button id="btnEdit" class="btn btn-sm btn-warning glyphicon glyphicon-pencil"/>
                 <button id="btnExc" class="btn btn-sm btn-danger glyphicon glyphicon-trash"/>
