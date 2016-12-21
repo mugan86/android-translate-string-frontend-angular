@@ -16,9 +16,24 @@ angular.module('translationsApp')
     ];
 
     console.log('Tranlations: ' + $routeParams.id);
+    console.log('Current Page: ' + $routeParams.page);
+
+    $scope.itemsPerPage = 15;
+
+    if ($routeParams.page === undefined)
+    { 
+      $scope.currentPage = 1;
+    }
+    else if ($routeParams.page === 0)
+    {
+      $scope.currentPage = 1;
+    }
+    else{ $scope.currentPage = $routeParams.page;}
+
+    console.log('Current page after if: ' + $scope.currentPage);
 
     //Show select APP Translate Text in second page with 6 results per page (dinamic)
-    translationsService.getSelectAppTranslateTexts($routeParams.id, 1, 15)
+    translationsService.getSelectAppTranslateTexts($routeParams.id, $scope.currentPage, $scope.itemsPerPage )
             .then(function(data) {
 
         $scope.translationsTexts = data.data;
