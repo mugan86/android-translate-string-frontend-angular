@@ -37,16 +37,29 @@ angular.module('translationsApp')
             .then(function(data) {
 
         $scope.translationsTexts = data.data;
+        //if ($scope.translationsTexts.length() === 0)
+
+        $scope.containData = false;
         console.log($scope.translationsTexts);
         $scope.mainData = $scope.translationsTexts[0];
-        $scope.translationsTexts.splice(0, 1);
-        console.log($scope.mainData);
-        console.log($scope.translationsTexts);
-        $scope.totalPages = [];
-        for (var page = 1; page <= $scope.mainData.total_pages; page++)
+        console.log($scope.mainData.log_message);
+        if ($scope.mainData.log_message == "Select page not exist. Max value to select page is 0")
         {
-          $scope.totalPages.push(page);
+          alert("Not data to select app");
         }
+        else
+        {
+          $scope.containData = true;
+          $scope.translationsTexts.splice(0, 1);
+          console.log($scope.mainData);
+          console.log($scope.translationsTexts);
+          $scope.totalPages = [];
+          for (var page = 1; page <= $scope.mainData.total_pages; page++)
+          {
+            $scope.totalPages.push(page);
+          }
+        }
+        
 
     });
   });
