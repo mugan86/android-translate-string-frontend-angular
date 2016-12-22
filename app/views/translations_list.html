@@ -1,5 +1,5 @@
 <div class="table-responsive">
-  <ul class="pagination">
+  <ul class="pagination" ng-show="containData">
     <li ng-class="{'disabled': currentPage == 1}">
       <a href="translations/com.amugika.servirace/{{currentPage-1}}" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
@@ -12,7 +12,7 @@
       </a>
     </li>
   </ul>         
-  <div>
+  <div ng-show="containData">
       <div>{{mainData.app_name}} / {{mainData.original_language}}</div>
       <table class="table table-hover">
         <thead>
@@ -41,6 +41,10 @@
           </tr>
         </tbody>
       </table>
+  </div>
+
+  <div ng-show="!containData">
+      Not contain translations this select app. Add in database!!
   </div>
   
 </div>
