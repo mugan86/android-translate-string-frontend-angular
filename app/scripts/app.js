@@ -21,11 +21,7 @@ angular
   ])
   .config(function ($routeProvider, $locationProvider) {
     
-    // use the HTML5 History API
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: true
-    });
+    $locationProvider.hashPrefix('');
 
     $routeProvider
       .when('/', {
